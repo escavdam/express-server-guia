@@ -6,9 +6,11 @@ app.use(express.static('public'));
 
 const execRoutes = require('./routes/exec');
 const formsRoutes = require('./routes/forms');
+const figletRoutes = require('./routes/api-figlet');
 const reqRoutes = require('./routes/ejemplo-api');
 app.use(execRoutes);
 app.use(formsRoutes);
+app.use(figletRoutes);
 app.use("/apiv1",reqRoutes);
 
 app.get('/', (req, res) => {
