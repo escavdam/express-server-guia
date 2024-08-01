@@ -12,9 +12,8 @@ app.use(formsRoutes);
 app.use("/apiv1",reqRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.sendFile(__dirname + '/public/contenido.html');
 });
-
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
