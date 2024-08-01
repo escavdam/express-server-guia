@@ -15,9 +15,8 @@ router.post('/figlet', express.json(), (req, res) => {
         horizontalLayout: 'default',
         verticalLayout: 'default'
     })
-    .then(data => {
-        console.log(data)
-        res.send({text: data});
+    .then(asciiart => {
+        res.send({text: asciiart});
     })
 });
 
